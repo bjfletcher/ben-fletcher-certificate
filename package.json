@@ -1,0 +1,7 @@
+{
+  "name": "ben-fletcher-certificate",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^1.5.0"
+  }
+}

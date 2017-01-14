@@ -1,0 +1,24 @@
+service: ben-fletcher-certificate
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  region: us-east-1 # certificates can be made only in this region
+
+resources:
+  Resources:
+    BenFletcherCertificate:
+      Type: AWS::CertificateManager::Certificate
+      Properties:
+        DomainName: '*.benfletcher.com'
+        SubjectAlternativeNames:
+          - benfletcher.com
+          - '*.benfletcher.net'
+          - benfletcher.net
+          - '*.benfletcher.org'
+          - benfletcher.org
+
+package:
+  exclude:
+    - node_modules/serverless
