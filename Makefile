@@ -5,8 +5,11 @@ export $(shell [ -f .env ] && sed 's/=.*//' .env)
 # ./node_modules/.bin on the PATH
 export PATH := ./node_modules/.bin:$(PATH)
 
+test:
+	@echo "no test"
+
 deploy:
 	@serverless deploy --verbose --region us-east-1 --stage prod
 
-test:
-	@echo "no test"
+list:
+	@aws acm list-certificates --region us-east-1
