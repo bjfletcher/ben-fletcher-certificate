@@ -21,4 +21,4 @@ resources:
 
 package:
   exclude:
-    - node_modules/serverless
+    - node_modules/serverless/**
