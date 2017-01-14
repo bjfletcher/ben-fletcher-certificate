@@ -7,3 +7,6 @@ export PATH := ./node_modules/.bin:$(PATH)
 
 deploy:
 	@serverless deploy --verbose --region us-east-1 --stage prod
+
+test:
+	@echo "no test"
