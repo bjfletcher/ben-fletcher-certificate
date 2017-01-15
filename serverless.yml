@@ -22,7 +22,10 @@ resources:
   Outputs:
     BFCert:
       Value:
-        Ref: BFCert # outputs the certificate ARN for use in other stacks
+        Ref: BFCert # outputs the certificate ARN
+      Export:
+        Name: BFCert # for use in other stacks
+
 
 package:
   exclude:
