@@ -20,9 +20,9 @@ resources:
           - benfletcher.org
 
   Outputs:
-    BFCertOutput:
+    BFCert:
       Value:
-        Ref: BFCert
+        Ref: BFCert # outputs the certificate ARN for use in other stacks
 
 package:
   exclude:
