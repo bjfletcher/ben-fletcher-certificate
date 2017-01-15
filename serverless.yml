@@ -1,4 +1,4 @@
-service: ben-fletcher-certificate
+service: bf-cert
 
 frameworkVersion: ">=1.2.0 <2.0.0"
 
@@ -8,7 +8,7 @@ provider:
 
 resources:
   Resources:
-    BenFletcherCertificate:
+    BFCert:
       Type: AWS::CertificateManager::Certificate
       Properties:
         DomainName: '*.benfletcher.com'
@@ -18,6 +18,11 @@ resources:
           - benfletcher.net
           - '*.benfletcher.org'
           - benfletcher.org
+
+  Outputs:
+    BFCertOutput:
+      Value:
+        Ref: BFCert
 
 package:
   exclude:

@@ -11,5 +11,5 @@ test:
 deploy:
 	@serverless deploy --verbose --region us-east-1 --stage prod
 
-list:
-	@aws acm list-certificates --region us-east-1
+info:
+	@serverless info --verbose --region us-east-1 --stage prod
